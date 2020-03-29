@@ -265,6 +265,7 @@ if($auth) {
         <section class="sidebar">
             <!-- Sidebar user panel -->
             <div class="user-panel">
+				<div style="display: table; table-layout: fixed; height: 67px;"></div>
                 <div class="pull-left info" style="height: 67px">
                     <p>Status</p>
                         <?php
@@ -344,9 +345,6 @@ if($auth) {
                         }
                     ?>
                 </div>
-            <div class="pull-left image">
-                    <div style="display: table; table-layout: fixed; height: 67px;"></div>
-			</div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <?php
             $scriptname = basename($_SERVER['SCRIPT_FILENAME']);
