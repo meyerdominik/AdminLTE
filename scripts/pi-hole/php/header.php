@@ -245,7 +245,7 @@ if($auth) {
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
-        <a href="/" class="logo" target="_blank">
+        <a href="/" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">P<b>h</b></span>
             <!-- logo for regular state and mobile devices -->
