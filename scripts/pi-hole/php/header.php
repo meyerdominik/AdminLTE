@@ -265,8 +265,8 @@ if($auth) {
         <section class="sidebar">
             <!-- Sidebar user panel -->
             <div class="user-panel">
-				<div style="display: table; table-layout: fixed; height: 67px;"></div>
-                <div class="pull-left info" style="height: 67px">
+				<!-- <div style="display: table; table-layout: fixed; height: 67px;"></div> -->
+                <div class="pull-left info" style="display: table; table-layout: fixed; height: 67px;">
                     <p>Status</p>
                         <?php
                         $pistatus = exec('sudo pihole status web');
