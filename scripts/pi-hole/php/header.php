@@ -256,77 +256,7 @@ if($auth) {
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
-            </a>		
-		<?php
-		
-		$DominikPIStatus = "";
-		$DominikPITemp = "";
-		$DominikPIMem = "";
-		
-		$pistatus = exec('sudo pihole status web');
-		if ($pistatus == "1") {
-			$DominikPIStatus = '<i class="fa fa-circle" style="color:#7FFF00"/> Active';
-		} elseif ($pistatus == "0") {
-			$DominikPIStatus = '<i class="fa fa-circle" style="color:#FF0000"/> Offline';
-		} elseif ($pistatus == "-1") {
-			$DominikPIStatus = '<i class="fa fa-circle" style="color:#FF0000"/> DNS service not running';
-		} else {
-			$DominikPIStatus = '<i class="fa fa-circle" style="color:#ff9900"/> Unknown';
-		}
-
-		// CPU Temp
-		if($FTL)
-		{
-			if ($celsius >= -273.15) {
-				$DominikPITemp = '<i class="fa fa-fire" style="color:';
-				if ($celsius > $temperaturelimit) {
-					$DominikPITemp .= "#FF0000";
-				}
-				else
-				{
-					$DominikPITemp .="#3366FF";
-				}
-				$DominikPITemp .= '"/> Temp:&nbsp;';
-				if($temperatureunit === "F")
-				{
-					$DominikPITemp .= round($fahrenheit,1) . "&nbsp;&deg;F";
-				}
-				elseif($temperatureunit === "K")
-				{
-					$DominikPITemp .= round($kelvin,1) . "&nbsp;K";
-				}
-				else
-				{
-					$DominikPITemp .= round($celsius,1) . "&nbsp;&deg;C";
-				}
-			}
-		}
-		else
-		{
-			$DominikPITemp = '<i class="fa fa-circle" style="color:#FF0000"/> FTL offline';
-		}
-		
-		$DominikPIMem = "<i class=\"fa fa-circle\" style=\"color:";
-			if ($memory_usage > 0.75 || $memory_usage < 0.0) {
-				$DominikPIMem .= "#FF0000";
-			}
-			else
-			{
-				$DominikPIMem .= "#7FFF00";
-			}
-			if($memory_usage > 0.0)
-			{
-				$DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp;" . sprintf("%.1f",100.0*$memory_usage) . "&thinsp;%";
-			}
-			else
-			{
-				$DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp; N/A";
-			}
-			
-			echo $DominikPIStatus;
-			echo $DominikPITemp;
-			echo $DominikPIMem;
-		?>
+            </a>
 		</nav>
 	</header>
     <!-- Left side column. contains the logo and sidebar -->
