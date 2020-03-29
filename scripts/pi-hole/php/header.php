@@ -563,3 +563,5 @@ if($auth) {
         exit();
     }
 ?>
+
+<span id="sessiontimercounter" hidden><?php if($auth && strlen($pwhash) > 0){echo $maxlifetime;}else{echo "0";} ?></span>
