@@ -425,12 +425,12 @@ $pistatus = exec('sudo pihole status web');
                     </li>
                   </ul>
                 </li>
-                <!-- Network -->
+                <!-- Network 
                 <li<?php if($scriptname === "network.php"){ ?> class="active"<?php } ?>>
                     <a href="network.php">
                         <i class="fa fa-network-wired"></i> <span>Network</span>
                     </a>
-                </li>
+                </li> -->
                 <!-- Settings -->
                 <li<?php if($scriptname === "settings.php"){ ?> class="active"<?php } ?>>
                     <a href="settings.php">
