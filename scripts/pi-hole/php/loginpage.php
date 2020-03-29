@@ -31,32 +31,10 @@
             <div class="form-group">
               <div class="checkbox pull-right"><label><input type="checkbox" id="logincookie" name="persistentlogin">Remember me for 7 days</label></div>
             </div>
-            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;&nbsp;Log in</button>
+            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i>Log in&nbsp;&nbsp;&nbsp;</button>
           </div>
         </div>
         <br>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box box-<?php if (!$wrongpassword) { ?>info<?php } else { ?>danger<?php }
-            if (!$wrongpassword) { ?> collapsed-box<?php } ?> box-solid">
-              <div class="box-header with-border">
-                <h3 class="box-title">Forgot password</h3>
-
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                      class="fa <?php if ($wrongpassword) { ?>fa-minus<?php } else { ?>fa-plus<?php } ?>"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="box-body">
-                After installing Pi-hole for the first time, a password is generated and displayed to the user. The
-                password cannot be retrieved later on, but it is possible to set a new password (or explicitly disable
-                the password by setting an empty password) using the command
-                <pre>sudo pihole -a -p</pre>
-              </div>
-            </div>
-          </div>
-        </div>
       </form>
     </div>
   </div>
