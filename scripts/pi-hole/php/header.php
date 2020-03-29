@@ -256,9 +256,7 @@ if($auth) {
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
-            </a>
-        </nav>
-		
+            </a>		
 		<?php
 		
 		$DominikPIStatus = "";
@@ -329,7 +327,8 @@ if($auth) {
 			echo $DominikPITemp;
 			echo $DominikPIMem;
 		?>
-    </header>
+		</nav>
+	</header>
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
