@@ -245,7 +245,7 @@ if($auth) {
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
-        <a href="http://pi-hole.net" class="logo" target="_blank">
+        <a href="/" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">P<b>h</b></span>
             <!-- logo for regular state and mobile devices -->
@@ -257,67 +257,6 @@ if($auth) {
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <li><a style="pointer-events:none;"><samp><?php echo gethostname(); ?></samp></a></li>
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            <img src="img/logo.svg" class="user-image" style="border-radius: initial" sizes="160x160" alt="Pi-hole logo" />
-                            <span class="hidden-xs">Pi-hole</span>
-                        </a>
-                        <ul class="dropdown-menu" style="right:0">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="img/logo.svg" sizes="160x160" alt="User Image" style="border-color:transparent" />
-                                <p>
-                                    Open Source Ad Blocker
-                                    <small>Designed For Raspberry Pi</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a class="btn-link" href="https://github.com/pi-hole" target="_blank">GitHub</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a class="btn-link" href="https://pi-hole.net" target="_blank">Website</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a class="btn-link" href="https://github.com/pi-hole/pi-hole/releases" target="_blank">Updates</a>
-                                </div>
-                                <div class="col-xs-12 text-center" id="sessiontimer">
-                                    <b>Session is valid for <span id="sessiontimercounter"><?php if($auth && strlen($pwhash) > 0){echo $maxlifetime;}else{echo "0";} ?></span></b>
-                                </div>
-                            </li>
-                            <!-- Menu Footer -->
-                            <li class="user-footer">
-                                <!-- Version Infos -->
-                                <?php /*
-                                <div class="<?php if(!isset($core_commit) && !isset($web_commit)) { ?>hidden-md <?php } ?>hidden-lg">
-                                    <b>Pi-hole Version </b> <?php
-                                    echo $core_current;
-                                    if(isset($core_commit)) { echo "<br>(".$core_branch.", ".$core_commit.")"; }
-                                    if($core_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/pi-hole/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
-                                    <b>Web Interface Version </b><?php
-                                    echo $web_current;
-                                    if(isset($web_commit)) { echo "<br>(".$web_branch.", ".$web_commit.")"; }
-                                    if($web_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/AdminLTE/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br>
-                                    <b>FTL Version </b> <?php
-                                    echo $FTL_current;
-                                    if($FTL_update){ ?> <a class="alert-link lookatme btn-link" href="https://github.com/pi-hole/FTL/releases" target="_blank" style="background:none">(Update available!)</a><?php } ?><br><br>
-                                </div>
-                                */ ?>
-                                <!-- PayPal -->
-                                <div class="text-center">
-                                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=3J2L3Z4DHW9UY" target="_blank" style="background:none">
-                                        <img src="img/donate.gif" alt="Donate">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
@@ -429,7 +368,6 @@ if($auth) {
             }
             ?>
             <ul class="sidebar-menu">
-                <li class="header">MAIN NAVIGATION</li>
                 <!-- Home Page -->
                 <li<?php if($scriptname === "index.php"){ ?> class="active"<?php } ?>>
                     <a href="index.php">
@@ -598,20 +536,6 @@ if($auth) {
                 <li<?php if($scriptname === "login"){ ?> class="active"<?php } ?>>
                     <a href="index.php?login">
                         <i class="fa far fa-user"></i> <span>Login</span>
-                    </a>
-                </li>
-                <?php } ?>
-                <!-- Donate -->
-                <li>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3J2L3Z4DHW9UY" target="_blank">
-                        <i class="fa-paypal-icon fab fa-paypal"></i> <span>Donate</span>
-                    </a>
-                </li>
-                <?php if($auth){ ?>
-                <!-- Help -->
-                <li<?php if($scriptname === "help.php"){ ?> class="active"<?php } ?>>
-                    <a href="help.php">
-                        <i class="fa fa-question-circle"></i> <span>Help</span>
                     </a>
                 </li>
                 <?php } ?>
