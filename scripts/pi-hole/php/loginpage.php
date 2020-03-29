@@ -28,8 +28,6 @@
         </div>
         <div class="row">
           <div class="col-xs-8">
-          </div>
-          <div class="col-xs-4">
             <div class="form-group">
               <div class="checkbox pull-right"><label><input type="checkbox" id="logincookie" name="persistentlogin">Remember me for 7 days</label></div>
             </div>
