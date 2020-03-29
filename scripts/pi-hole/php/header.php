@@ -265,10 +265,7 @@ if($auth) {
         <section class="sidebar">
             <!-- Sidebar user panel -->
             <div class="user-panel">
-                <div class="pull-left image">
-                    <img hidden src="img/LUL.svg" class="img-responsive" alt="Pi-hole logo" style="display: table; table-layout: fixed; height: 67px;"/>
-                </div>
-                <div class="pull-left info">
+                <div class="pull-left info" style="height: 67px">
                     <p>Status</p>
                         <?php
                         $pistatus = exec('sudo pihole status web');
