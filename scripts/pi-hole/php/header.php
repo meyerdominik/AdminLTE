@@ -266,7 +266,7 @@ if($auth) {
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img hidden src="img/LUL.svg" class="img-responsive" alt="Pi-hole logo" style="display: table; table-layout: fixed; height: 67px;"/>
+                    <img src="img/LUL.svg" class="img-responsive" alt="Pi-hole logo" style="none"/>
                 </div>
                 <div class="pull-left info">
                     <p>Status</p>
