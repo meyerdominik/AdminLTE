@@ -227,6 +227,9 @@
 if($auth) {
     echo "<div id='token' hidden>$token</div>";
 }
+
+$pistatus = exec('sudo pihole status web');
+
 ?>
 <script src="scripts/pi-hole/js/header.js"></script>
 
