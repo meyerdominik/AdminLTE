@@ -265,9 +265,7 @@ if($auth) {
         <section class="sidebar">
             <!-- Sidebar user panel -->
             <div class="user-panel">
-				<div class="pull-left image">
-                    <div style="display: table; table-layout: fixed; height: 67px;" />
-				</div>
+				<div style="display: table; table-layout: fixed; height: 67px;" />
                 <div class="pull-left info">
                     <p>Status</p>
                         <?php
