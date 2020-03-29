@@ -280,49 +280,49 @@ if($auth) {
 		if($FTL)
 		{
 			if ($celsius >= -273.15) {
-				DominikPITemp = '<i class="fa fa-fire" style="color:';
+				$DominikPITemp = '<i class="fa fa-fire" style="color:';
 				if ($celsius > $temperaturelimit) {
-					DominikPITemp .= "#FF0000";
+					$DominikPITemp .= "#FF0000";
 				}
 				else
 				{
-					DominikPITemp .="#3366FF";
+					$DominikPITemp .="#3366FF";
 				}
-				DominikPITemp .= '"/> Temp:&nbsp;';
+				$DominikPITemp .= '"/> Temp:&nbsp;';
 				if($temperatureunit === "F")
 				{
-					DominikPITemp .= round($fahrenheit,1) . "&nbsp;&deg;F";
+					$DominikPITemp .= round($fahrenheit,1) . "&nbsp;&deg;F";
 				}
 				elseif($temperatureunit === "K")
 				{
-					DominikPITemp .= round($kelvin,1) . "&nbsp;K";
+					$DominikPITemp .= round($kelvin,1) . "&nbsp;K";
 				}
 				else
 				{
-					DominikPITemp .= round($celsius,1) . "&nbsp;&deg;C";
+					$DominikPITemp .= round($celsius,1) . "&nbsp;&deg;C";
 				}
 			}
 		}
 		else
 		{
-			DominikPITemp = '<i class="fa fa-circle" style="color:#FF0000"/> FTL offline';
+			$DominikPITemp = '<i class="fa fa-circle" style="color:#FF0000"/> FTL offline';
 		}
 		
-		DominikPIMem = "<i class=\"fa fa-circle\" style=\"color:";
+		$DominikPIMem = "<i class=\"fa fa-circle\" style=\"color:";
 			if ($memory_usage > 0.75 || $memory_usage < 0.0) {
-				DominikPIMem .= "#FF0000";
+				$DominikPIMem .= "#FF0000";
 			}
 			else
 			{
-				DominikPIMem .= "#7FFF00";
+				$DominikPIMem .= "#7FFF00";
 			}
 			if($memory_usage > 0.0)
 			{
-				DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp;" . sprintf("%.1f",100.0*$memory_usage) . "&thinsp;%";
+				$DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp;" . sprintf("%.1f",100.0*$memory_usage) . "&thinsp;%";
 			}
 			else
 			{
-				DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp; N/A";
+				$DominikPIMem .= "\"/> Memory usage:&nbsp;&nbsp; N/A";
 			}
 			
 			echo $DominikPIStatus;
