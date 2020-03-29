@@ -170,10 +170,6 @@ if(sessionvalidity > 0)
 
     }, 1000);
 }
-else
-{
-    document.getElementById("sessiontimer").style.display = "none";
-}
 
 // Handle Strg + Enter button on Login page
 $(document).keypress(function(e) {

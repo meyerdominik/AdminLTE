@@ -68,3 +68,4 @@
     </div>
   </div>
 </div>
+<span id="sessiontimercounter" hidden>0</span>
