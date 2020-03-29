@@ -224,7 +224,7 @@ if (isset($setupVars["API_PRIVACY_MODE"])) {
 ?>
 
 <?php
-if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists", "dns", "api", "privacy", "teleporter"))) {
+if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists", "dns", "api", "privacy"))) {
     $tab = $_GET['tab'];
 } else {
     $tab = "sysadmin";
@@ -239,7 +239,6 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                 <li<?php if($tab === "dns"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#dns">DNS</a></li>
                 <li<?php if($tab === "api"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#api">API / Web interface</a></li>
                 <li<?php if($tab === "privacy"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#privacy">Privacy</a></li>
-                <li<?php if($tab === "teleporter"){ ?> class="active"<?php } ?>><a data-toggle="tab" href="#teleporter">Teleporter</a></li>
             </ul>
             <div class="tab-content">
                 <!-- ######################################################### Blocklists ######################################################### -->
@@ -297,7 +296,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                         </div>
                     </form>
                 </div>
-                <!-- ######################################################### DHCP ######################################################### -->
+                <!-- ######################################################### DNS ######################################################### -->
                 <div id="dns" class="tab-pane fade<?php if($tab === "dns"){ ?> in active<?php } ?>">
                     <form role="form" method="post">
                         <div class="row">
@@ -742,90 +741,6 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "blocklists"
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </div>
-                <!-- ######################################################### Teleporter ######################################################### -->
-                <div id="teleporter" class="tab-pane fade<?php if($tab === "teleporter"){ ?> in active<?php } ?>">
-                    <div class="row">
-                        <?php if (extension_loaded('Phar')) { ?>
-                        <form role="form" method="post" id="takeoutform"
-                              action="scripts/pi-hole/php/teleporter.php"
-                              target="_blank" enctype="multipart/form-data">
-                            <input type="hidden" name="token" value="<?php echo $token ?>">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="box box-warning">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title">Teleporter Export</h3>
-                                    </div>
-                                    <div class="box-body">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <p>Export your Pi-hole lists as downloadable archive</p>
-                                                <button type="submit" class="btn btn-default">Export</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="box box-warning">
-                                    <div class="box-header with-border">
-                                        <h3 class="box-title">Teleporter Import</h3>
-                                    </div>
-                                    <div class="box-body">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-12">
-                                                <label>Import ...</label>
-                                                <div class="form-group">
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" name="whitelist" value="true"
-                                                                      checked>
-                                                            Whitelist</label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" name="blacklist" value="true"
-                                                                      checked>
-                                                            Blacklist (exact)</label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" name="regexlist" value="true"
-                                                                      checked>
-                                                            Regex filters</label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" name="auditlog" value="true"
-                                                                      checked>
-                                                            Audit log</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12">
-                                                <div class="form-group">
-                                                    <label for="zip_file">File input</label>
-                                                    <input type="file" name="zip_file" id="zip_file">
-                                                    <p class="help-block">Upload only Pi-hole backup files.</p>
-                                                    <button type="submit" class="btn btn-default" name="action"
-                                                            value="in">Import
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <?php } else { ?>
-                        <div class="col-lg-12">
-                            <div class="box box-warning">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Teleporter</h3>
-                                </div>
-                                <div class="box-body">
-                                    <p>The PHP extension <code>Phar</code> is not loaded. Please ensure it is installed and loaded if you want to use the Pi-hole teleporter.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
                     </div>
                 </div>
                 <!-- ######################################################### System admin ######################################################### -->
