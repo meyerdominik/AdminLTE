@@ -192,10 +192,10 @@
     <link rel="shortcut icon" href="img/KEKW.png" type="image/x-icon" />
     <meta name="theme-color" content="#367fa9">
     <link rel="apple-touch-icon" sizes="180x180" href="img/KEKW.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/LUL.svg">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/LUL.svg">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/LUL.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/LUL.png">
     <meta name="msapplication-TileColor" content="#367fa9">
-    <meta name="msapplication-TileImage" content="img/LUL.svg">
+    <meta name="msapplication-TileImage" content="img/LUL.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
