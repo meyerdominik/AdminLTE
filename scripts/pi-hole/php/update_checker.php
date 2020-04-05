@@ -36,7 +36,7 @@ else
 	$web_branch = $branches[1];
 	if($web_branch !== "master") {
 	    $web_current = "vDev";
-	    $web_commit = $versions[1];
+	    $web_commit = "4.3.3";// $versions[1];
 	}
 	else {
 	    $web_current = explode("-",$versions[1])[0];
